@@ -1,15 +1,5 @@
-Skip to content
-Personal Open source Business Explore
-Sign upSign inPricingBlogSupport
-This repository
-Search
- Watch 1,795  Star 40,642  Fork 16,108 github/gitignore
- Code  Pull requests 163  Pulse  Graphs
-Branch: master Find file Copy pathgitignore/Python.gitignore
-1c652a2  on Aug 14
-@Shir0kamii Shir0kamii Add hidden virtualenv to Python template
-49 contributors @arcresu @Metallicow @svkampen @shiftkey @toanant @misaelnieto @EvandroLG @Harrison-G @vltr @hugovk @Lucretiel @matheussl @hippo91 @manavm @rayshan @llonchj @kdeldycke @jspahrsummers @honzajavorek @reinout @roll @relekang @geogdog @gsnedders @xiaogaozi @adamv and others
-RawBlameHistory     91 lines (72 sloc)  1.03 KB
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
