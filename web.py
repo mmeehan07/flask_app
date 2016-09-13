@@ -10,9 +10,9 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     location = request.values.get('location')
-    terms = request.values.get('terms')
+    term = request.values.get('term')
     businesses = None
-    if location:
+    if location or term:
         businesses = yelp_mickey.get_businesses(term,location)
     return render_template('index.html', businesses=businesses)
 
@@ -22,5 +22,6 @@ def about():
     return render_template('about.html')
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    # port = int(os.environ.get("PORT", 5000))
+    # app.run(host="0.0.0.0", port=port)
+    app.run()

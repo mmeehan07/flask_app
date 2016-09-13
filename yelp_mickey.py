@@ -33,7 +33,7 @@ def get_businesses(term, location):
     client = Client(auth)
     params = {
         'term': term,
-        'lang': 'en'
+        'lang': 'en',
             }
     response = client.search(location, **params)
 
@@ -45,7 +45,7 @@ def get_businesses(term, location):
         "phone": business.phone
         })
     
-    return businesses
+    return businesses[:3]
 
 
 

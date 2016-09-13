@@ -8,12 +8,17 @@
         <div class = "jumbotron">
             <div class = "container">
                 {% if businesses %}
-                    <h1>{{ businesses }}!</h1>
+                    {% for business in businesses %}
+                        <h1>Name:{{ business.name }}</h1>
+                        <h3>Rating:{{ business.rating }}</h3>
+                        <h3>Phone:{{ business.phone }}</h3>
+                        
+                    {% endfor %}
                 {% else %}
                     <h1>Hello! What City are you in?</h1>
                     <form action="/" class ="form-inline">
                         <div class="form-group">
-                            <input type = "text" name="Location" 
+                            <input type = "text" name="location" 
                             placeholder="Enter Your City"
                             class="form-control">
                         </div>
@@ -28,6 +33,7 @@
                      
                     </form>
                 {% endif %}
+
 
                 <a href="{{ url_for('about') }}">About This Project</a>
             </div>
