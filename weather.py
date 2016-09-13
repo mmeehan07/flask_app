@@ -1,6 +1,8 @@
 import forecastio
 from geopy.geocoders import Nominatim
-
+import os
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 
 # latitude = 37.9101
@@ -25,7 +27,7 @@ from geopy.geocoders import Nominatim
 #     return coordinates = [latitude, longitude]
 
 def get_weather(city):
-    api_key = "97ad36d4370334b97c75fe673afbe26b"
+    api_key = os.environ['FORECAST_API_KEY']
     geolocator = Nominatim()
     location = geolocator.geocode(city)
     latitude = location.latitude
