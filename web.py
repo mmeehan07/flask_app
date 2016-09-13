@@ -12,7 +12,7 @@ def index():
     location = request.values.get('location')
     terms = request.values.get('terms')
     businesses = None
-    if city:
+    if location:
         businesses = yelp_mickey.get_businesses(term,location)
     return render_template('index.html', businesses=businesses)
 

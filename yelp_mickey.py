@@ -18,8 +18,8 @@ load_dotenv(find_dotenv())
 
 #Create function that takes in a term and location and print top businesses
 
-term = input("What food are you looking for?")
-location = input("Where do you want to eat?")
+# term = input("What food are you looking for?")
+# location = input("Where do you want to eat?")
 
 
 def get_businesses(term, location):
@@ -47,7 +47,7 @@ def get_businesses(term, location):
     
     return businesses
 
-businesses = get_businesses(term, location)
+
 
 
 
