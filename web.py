@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import weather
+import yelp_mickey
 import os
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
@@ -9,11 +9,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    city = request.values.get('city')
-    forecast = None
+    location = request.values.get('location')
+    terms = request.values.get('terms')
+    businesses = None
     if city:
-        forecast = weather.get_weather(city)
-    return render_template('index.html', forecast=forecast)
+        businesses = yelp_mickey.get_businesses(term,location)
+    return render_template('index.html', businesses=businesses)
 
 
 @app.route("/about")

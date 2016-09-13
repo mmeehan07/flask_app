@@ -7,15 +7,23 @@
     <body>
         <div class = "jumbotron">
             <div class = "container">
-                {% if forecast %}
-                    <h1>{{ forecast }}!</h1>
-                    <a href="{{ url_for('index') }}">Check another city</a>
+                {% if businesses %}
+                    <h1>{{ businesses }}!</h1>
                 {% else %}
                     <h1>Hello! What City are you in?</h1>
                     <form action="/" class ="form-inline">
                         <div class="form-group">
-                            <input type = "text" name="city" 
+                            <input type = "text" name="Location" 
                             placeholder="Enter Your City"
+                            class="form-control">
+                        </div>
+                        <input type = "Submit" value="Submit"" class="btn 
+                        btn-primary">
+                        <h1>What would you like to eat?</h1>
+                        <form action="/" class ="form-inline">
+                        <div class="form-group">
+                            <input type = "text" name="term" 
+                            placeholder="Type of Food"
                             class="form-control">
                         </div>
                         <input type = "Submit" value="Submit"" class="btn 
