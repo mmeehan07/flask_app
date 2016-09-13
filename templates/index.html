@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" 
+        integrity="2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3C
+        UQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class = "jumbotron">
+            <div class = "container">
+                {% if forecast %}
+                    <h1>{{ forecast }}!</h1>
+                    <a href="{{ url_for('index') }}">Check another city</a>
+                {% else %}
+                    <h1>Hello! What City are you in?</h1>
+                    <form action="/" class ="form-inline">
+                        <div class="form-group">
+                            <input type = "text" name="city" 
+                            placeholder="Enter Your City"
+                            class="form-control">
+                        </div>
+                        <input type = "Submit" value="Submit"" class="btn 
+                        btn-primary">
+                    </form>
+                {% endif %}
+
+                <a href="{{ url_for('about') }}">About This Project</a>
+            </div>
+        </div>
+    </body>
+</html>
